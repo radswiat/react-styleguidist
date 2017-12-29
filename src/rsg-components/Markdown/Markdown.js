@@ -192,7 +192,6 @@ const styles = ({ space, fontFamily, fontSize, color, borderRadius }) => ({
 
 function Markdown({ classes, text, inline }) {
 	const overrides = inline ? getInlineOverrides(classes) : getBaseOverrides(classes);
-	console.log('--------', overrides);
 	return compiler(text, { overrides, forceBlock: true });
 }
 
@@ -201,6 +200,7 @@ export function asArrayMarkdown({ text }) {
 	const markdowns = [];
 	text.map((example) => {
 		const rhs = example.content.split(OS.EOL).filter((line) => /^(>)([\s\w\W]+)$/.test(line));
+		console.log(rhs);
 		rhs.map((rhsText) => {
 			markdowns.push(compiler(rhsText, { overrides: {
 					blockquote: {
@@ -212,8 +212,6 @@ export function asArrayMarkdown({ text }) {
 				}, forceBlock: true }));
 		});
 	});
-	console.error('--------- as array --------');
-	console.log(markdowns);
 	return markdowns;
 }
 
