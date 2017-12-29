@@ -4,17 +4,22 @@
 
 **MODIFIED VERSION**
 
-**Isolated React component development environment with a living style guide**
+This is modified version of the original React Styleguidist.
 
 </div>
 
-React Styleguidist is a component development environment with hot reloaded dev server and a living style guide that you can share with your team. It lists component `propTypes` and shows live, editable usage examples based on Markdown files. Check out [**the demo style guide**](https://react-styleguidist.js.org/examples/basic/).
+### Read below before use
+- this repo will not be maintained
+- no support will be provided
+- no documentation updates for new features
+- there can be lots of issues with different configurations as I only made this to work for my own needs
+- use on your own responsibility
 
 # Deviations from original styleguidist package
 - changes in babel configuration to fix MobX observables
 - groups support ( create any groups by defining path regex and group title, it will modify TableOfContents and what components are visible on the view )
 - add extra comments column for special md comment blocks ( work in progress, screenshot below )
-- more in progress 
+- inject custom scss file to modify styles ( customScss: './examples/basic/custom.scss', )
 
 ![](https://i.imgur.com/Ifof2of.png)
 ![](https://i.imgur.com/bL0lsVz.png)
