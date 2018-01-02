@@ -1,8 +1,15 @@
+const path = require('path');
+
 module.exports = {
+	dev: true,
 	title: "Styleguide",
 	components: 'src/app/**/[A-Z]*.js',
 	defaultExample: true,
-	customScss: './examples/basic/custom.scss',
+	useCustomScss: false,
+	require: [
+		// require global main.scss file
+		path.join(__dirname, 'styles/core.scss'),
+	],
 	groups: {
 		documentation: {
 			title: 'Documentation',
@@ -84,6 +91,21 @@ module.exports = {
 					test: /\.css$/,
 					loader: 'style-loader!css-loader',
 				},
+				{
+					test: /\.scss$/,
+					exclude: /node_modules/,
+					use: [
+						{
+							loader: 'style-loader',
+						},
+						{
+							loader: 'css-loader',
+						},
+						{
+							loader: 'sass-loader',
+						},
+					],
+				}
 			],
 		},
 	},

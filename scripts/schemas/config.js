@@ -19,6 +19,10 @@ const fileExistsCaseInsensitive = require('../utils/findFileCaseInsensitive');
 const consts = require('../consts');
 
 module.exports = {
+	dev: {
+		type: 'boolean',
+		default: false,
+	},
 	assetsDir: {
 		type: 'existing directory path',
 		example: 'assets',
@@ -197,9 +201,9 @@ module.exports = {
 		type: 'object',
 		default: null,
 	},
-	customScss: {
-		type: 'string',
-		default: '',
+	useCustomScss: {
+		type: 'boolean',
+		default: false,
 	},
 	skipComponentsWithoutExample: {
 		type: 'boolean',
