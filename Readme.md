@@ -26,6 +26,24 @@ This is modified version of the original React Styleguidist.
 ![](https://i.imgur.com/bL0lsVz.png)
 ![](https://i.imgur.com/G8EboqS.png)
 
+# Change Log
+
+All notable changes to this project will be documented in this file.
+
+> **[ 1.2.* ]** - 10 - Jan - 2018
+- styling changes
+
+> **[ 1.2.4 ]** - 9 - Jan - 2018
+- headings
+  - **improvements**
+    - headings will use pure scss
+  - **new features**
+    - add type support, component heading will have extra class now `heading--type-component`
+
+
+
+---------- Original styleguidist readme ----------
+
 ## Usage
 
 * **[Getting Started](https://react-styleguidist.js.org/docs/getting-started.html): install and run Styleguidist**
